@@ -36,7 +36,9 @@ header section img{
     position: absolute; left: 100px; top: 10px;
     background-color: white;
     border-radius: 50%;
-
+    animation-name: animacionDos;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 
 
@@ -69,16 +71,26 @@ nav ul li{
     padding: 10px;
     background-color: white;
 }
-
-
-
+nav ul li a{
+    color: black;
+    transition: color 200ms;
+}
+nav ul li a:hover{
+    color: rgba(0, 79, 0, 0.668);
+}
 
 nav section p{
     margin: 15%;
     padding: 20px;
     background-color: white;
-
+    transition: 1s;
 }
+
+nav section p:hover{
+    margin: 30px;
+}
+
+
 
 
 /*---MAIN---*/
@@ -99,7 +111,14 @@ main section{
     padding: 20px;
     border: 10px solid rgba(0, 0, 0, 0.449);
     font-weight: 700;
+    transition: all 1s;
+}
 
+main section:hover{
+    width: 60%;
+    height: 65vh;
+    background-color: rgb(127, 255, 155);
+    border-style:double;
 }
 
 
@@ -110,10 +129,25 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 1s;
+}
 
+footer a:hover{
+    color: black;
 }
 
 footer p{
     color: white;
 }
 
+/*---KEYFRAMES---*/
+@keyframes animacionUno {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes animacionDos {0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
